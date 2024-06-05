@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .aboutSection{
+    color:white;
+  }
+  .slideshow {
+    height: 100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 50%;
+    height: 90vh;
+    border: 7rem solid rgb(42 14 97 / 0.9);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50%;
+    flex-shrink: 0;
+    transition: all 1s;
+  }
+  @media screen and (max-width: 52em){
+    .carousel{
+        height:90vw;
+        width:50vh;
+        border-width:4rem;
+        top:-20%;
+    }
+    .slide.active img {
+        transform: scale(1.25);
+    }
+    .WhyContainer{
+      height:100px;
+      width:80%!important;
+      padding:10px;
+    }
+    .Names{
+      bottom:25rem!important;
+      width:80%!important;
+      padding: 10px;
+    }
+    .Bio{
+      width:80%!important;
+      padding:10px!important;
+    }
+    .progress-container{
+      width:80%!important;
+    }
+  }
+  .slide {
+    width: 20%;
+    position: absolute;
+  }
+  
+  .slide:nth-child(1) {
+    bottom: -20%;
+  }
+  
+  .slide:nth-child(2) {
+    top: -20%;
+    transform:rotate(180deg);
+  }
+  .slide.active img {
+    transform: scale(2.25);
+    transition: all 1s 1s;
+    border-radius:50%;
+  }
+  
+  .slide img {
+    width: 90%;
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+  
+  .controls {
+    position: sticky;
+    bottom: 0%;
+  }
+  
+  .controls a {
+    padding: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10rem;
+    transition: all 1s;
+  }
+  
+  .controls a.active {
+    background-color: rgb(42 14 97 / 1);
+  }
+  
+  .controls img {
+    width: 5rem;
+  }
+  .hidden {
+    display:none;
+  }
+  @keyframes fadeIn {
+    to {
+      width: 90%;
+      
+    }
+  }
+  
+  .progress-container {
+    margin: 2px auto;
+    padding: 5px;
+    background-color: #ddd;
+    width:50%;
+    border-radius:10px;
+    color:black;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    background-color: rgb(42 14 97 / 0.9);
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    animation: flash 2s infinite;
+  }
+  
+  @keyframes flash {
+    0%, 100% { background-color:rgb(42 14 97 / 0.9); }
+    50% { background-color:rgb(42 14 97 / 0.75); }
+  }
+  
+  .jersey-15-regular {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  .Names{
+    margin: 0 auto;
+    width:600px;
+    padding: 10px;
+    position:sticky;
+    bottom:40%;
+  }
+  .Names h1, .WhyContainer h1{
+    font-size:1.5rem;
+  }
+  .Bio{
+    width:60%;
+    height: 400px;
+    overflow-y: scroll;
+    padding:20px;
+    margin: 0 auto;
+  }
+  .WhyContainer{
+    width:600px;
+    margin:0 auto;
+    padding:10px;
+    border-radius:10px;
+    position:sticky;
+    bottom: 20%;
+  }
+  .WhyContainer div{
+    height:75px;
+    overflow-y: scroll;
+  }
